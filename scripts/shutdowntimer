@@ -1,0 +1,6 @@
+#!/bin/bash
+#Ask me for how long until shutdown, does it, then closes window
+
+read -p 'Minutes till shutdown? ' time
+
+shutdown $time

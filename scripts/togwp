@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while true 
+do
+	feh --bg-fill --randomize /home/dustin/wallpaper
+	echo "Changed wallpaper!"
+	read -p "Press key to advance wallpaper or Ctrl-C to exit"
+done
