@@ -10,10 +10,10 @@ alert = #ed404c
 
 [bar/main]
 width = 100%:-48
-offset-x = 24
-offset-y = 24
+offset-x = 21
+offset-y = 15
 
-height = 85
+height = 50
 radius = 0.0
 
 override-redirect = true
@@ -27,8 +27,8 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 1
 
-font-0 = Iosevka,Iosevka Nerd Font:style=Regular,Book:pixelsize=30:antialias=true;2.5
-font-1 = Iosevka,Iosevka Nerd Font:style=Regular,Book:style=Regular:pixelsize=100:antialias=true;3
+font-0 = Iosevka,Iosevka Nerd Font:style=Regular,Book:pixelsize=15:antialias=true;2.5
+font-1 = Iosevka,Iosevka Nerd Font:style=Regular,Book:style=Regular:pixelsize=150:antialias=true;3
 
 modules-left = i3
 modules-center = xwindow

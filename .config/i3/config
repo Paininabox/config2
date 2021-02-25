@@ -7,7 +7,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-exec powertop --auto-tune
+
+set $hp alsa_output.pci-0000_07_00.0.analog-surround-51
+set $sp alsa_output.pci-0000_00_1b.0.analog-stereo
 set $mod Mod4
 bindsym $mod+Tab workspace next
 exec picom
@@ -35,6 +37,31 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+exec_always prismatik --nogui; sleep 10;  prismatik --on
+
+bindsym $mod+Shift+m exec ~/movie
+mouse_warping none
+bindsym $mod+p exec ~/hp.sh
+bindsym $mod+o exec ~/sp.sh
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $hp +10% && pactl set-sink-volume $sp +10%
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume $hp -10% && pactl set-sink-volume $sp -10%
+#bindsym XF86AudioMute exec pactl set-sink-mute $hp toggle && exec pactl set-sink-mute $sp toggle
+#bindsym XF86AudioPlay exec playerctl play-pause
+#bindsym XF86AudioNext exec playerctl next
+#bindsym XF86AudioPrev exec playerctl previous
+workspace 1 output GPU-0.HDMI-0
+workspace 2 output GPU-0.HDMI-0
+workspace 3 output GPU-0.HDMI-0
+workspace 4 output GPU-0.HDMI-0
+workspace 5 output GPU-0.HDMI-0
+workspace 6 output GPU-1.HDMI-0
+workspace 7 output GPU-1.HDMI-0
+workspace 8 output GPU-1.HDMI-0 
+workspace 9 output GPU-1.HDMI-0
+workspace 10 output GPU-1.HDMI-0
+workspace 11 output GPU-0.HDMI-0
+workspace 12 output GPU-1.HDMI-0
+bindsym $mod+t exec monitor
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -125,6 +152,7 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+c workspace 11; workspace 12
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -170,7 +198,7 @@ default_border pixel 0
 hide_edge_borders smart
 gaps inner 10
 gaps outer 5
-gaps top 40
+gaps top 68
 #smart_gaps on
 exec unclutter &
 exec_always clight
