@@ -1,5 +1,3 @@
-#!/bin/bash
+#!/bin/sh
+feh --no-fehbg --bg-fill --randomize --no-xinerama /home/dustin/wallpaper
 
-export DISPLAY=:0
-feh --bg-fill --randomize /home/dustin/wallpaper
-echo "Changed wallpaper!"

@@ -223,4 +223,4 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #set background image
-exec ~/.fehbg &
+exec ~/scripts/wallpaper.sh
