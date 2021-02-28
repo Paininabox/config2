@@ -39,10 +39,10 @@ font pango:monospace 8
 
 exec_always prismatik --nogui; sleep 10;  prismatik --on
 
-bindsym $mod+Shift+m exec ~/movie
+bindsym $mod+Shift+m exec ~/scripts/movie
 mouse_warping none
-bindsym $mod+p exec ~/hp.sh
-bindsym $mod+o exec ~/sp.sh
+bindsym $mod+p exec ~/scripts/hp.sh
+bindsym $mod+o exec ~/scripts/sp.sh
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $hp +10% && pactl set-sink-volume $sp +10%
 #bindsym XF86AudioLowerVolume exec pactl set-sink-volume $hp -10% && pactl set-sink-volume $sp -10%
 #bindsym XF86AudioMute exec pactl set-sink-mute $hp toggle && exec pactl set-sink-mute $sp toggle
@@ -61,7 +61,7 @@ workspace 9 output GPU-1.HDMI-0
 workspace 10 output GPU-1.HDMI-0
 workspace 11 output GPU-0.HDMI-0
 workspace 12 output GPU-1.HDMI-0
-bindsym $mod+t exec monitor
+bindsym $mod+t exec ~/scripts/monitor.sh
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
